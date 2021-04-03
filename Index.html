@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>管理系统</title>
+    <!-- ======基础样式开始======-->
+    <link rel="shortcut icon" href="Content/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="Content/css/blue/icon.css">
+    <link rel="stylesheet" type="text/css" href="Content/css/blue/pub.css" />
+    <link rel="stylesheet" type="text/css" href="Content/css/blue/easyui/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="Content/css/blue/main.css" />
+    <link rel="stylesheet" type="text/css" href="Content/css/blue/header.css" />
+    <link rel="stylesheet" type="text/css" href="Content/css/blue/menu.css" />
+    <link rel="stylesheet" type="text/css" href="Content/css/Site.css" />
+</head>
+
+<body class="easyui-layout" style="overflow-y: hidden" scroll="no">
+    <div region="north" split="false" style="height: 94px;" iconcls="icon-menu" id="north" border="false" class="title">
+        <div fit="true" class="easyui-accordion" border="false">
+            <div style="width: 100%; height: 100%; margin-top: 0">
+                <div class="header" id="header">
+                    <div class="header_top clearfix" id="top">
+                        <div class="logo">
+                            <a href="#" title="管理系统"></a>
+                        </div>
+                        <div class="fr">
+                            <div class="user_info">
+                                <a href="#" title="邮箱"><span class="i_email"></span></a>
+                                <a href="#" title="修改密码"><span class="i_lock"></span></a>
+                                <a href="#" title="退出" onclick="logout();"><span class="i_quit"></span></a>
+                            </div>
+
+                            <div class="login_info">管理员，你好！</div>
+                        </div>
+                    </div>
+                    <div class="nav">
+                        <ul class="nav_menu" id="ul_cartList">
+                        </ul>
+                        <div class="header_date">
+                            <span id="date"></span><span id="time"></span>&nbsp; <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div region="west" split="true" border="false" style="width: 200px;"
+         iconcls="icon-menu" id="west" title=" " class="title">
+        <div id="nav" fit="true" class="easyui-accordion" border="false">
+
+            <div style="width: 100%; height: 100%; margin-top: 0; background: #e8e9ec;">
+                <div class="side_menu">
+                    <ul id="ul_menu">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainPanle" region="center"
+         style="background: #fff; overflow-y: auto; border: 0;"
+         border="false">
+        <div id="tabs" class="easyui-tabs" fit="true" border="false">
+            <div id="tabTitle" title="首页" style="overflow:hidden;">
+                <iframe src="" name="mainFrame" id="mainFrame" width="100%"
+                        height="100%" frameborder=0 marginheight=0></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="mm" class="easyui-menu" style="width: 150px;">
+        <div id="mm-tabupdate">刷新</div>
+        <div class="menu-sep"></div>
+        <div id="mm-tabclose">关闭</div>
+        <div id="mm-tabcloseall">全部关闭</div>
+        <div id="mm-tabcloseother">除此之外全部关闭</div>
+        <div class="menu-sep"></div>
+        <div id="mm-tabcloseright">当前页右侧全部关闭</div>
+        <div id="mm-tabcloseleft">当前页左侧全部关闭</div>
+        <div class="menu-sep"></div>
+        <div id="mm-exit">退出</div>
+    </div>
+    <div id="south" iconcls="icon-menu" region="south" split="false" border="false" style="height: 30px;">
+        <div fit="true" class="easyui-accordion" border="true">
+            <div style="width: 100%; height: 100%; margin-top: 0">
+                <div class="footer" style="height: 30px; line-height: 30px; padding: 0 10px; color: #adb3e3; background: #5b67c6;">
+                    <div class="fl">
+                        版本：1.00.00
+                    </div>
+                    <div class="fr">
+                        版权所有：Kepton
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+    <!-- 弹出窗口 -->
+    <div id="dataForm" style="overflow: hidden;" title="编辑">
+        <iframe id="winSrc" frameborder="0" width="100%" height="100%"
+                src="Content/htmls/loading.html"></iframe>
+    </div>
+
+   
+    <script src="Content/javascript/jquery.min.js"></script>
+    <script src="Content/javascript/base/plugins/jquery.cookie.js"></script>
+    <script src="Content/jquery-easyui/jquery.easyui.min.js"></script>
+    <script src="Content/jquery-easyui/easyui-datagrid-tip.js"></script>
+    <script src="Content/jquery-easyui/easyui-lang-zh_CN.js"></script>
+    <script src="Content/jquery-easyui/easyui-extend.js"></script>
+    <script src="Content/javascript/pub.js"></script>
+    <script src="Content/javascript/menu_min.js"></script>
+    <script src="Content/javascript/tabs.js"></script>
+    <script src="Content/javascript/timer.js"></script>
+    <script src="Content/my97/WdatePicker.js"></script>
+    <script src="Scripts/App/utility.js"></script>
+    <script src="Scripts/App/DateGiredExtend.js"></script>
+    <script src="Content/javascript/mustache.js"></script>
+    <script src="Scripts/App/Index.js"></script>
+    <script id="headMenuTemplate" type="text/html">
+        {{#menu}}
+        <li><a id="{{ID}}" onclick=BuildVMenu("{{ID}}")>{{name}}</a></li>
+        {{/menu}}
+        <li>
+            <div class="nav_search">
+                <b class="sJ0"></b>
+                <b class="nui_ico"></b>
+                <div class="nui_ipt">
+                    <label class="nui_ipt_placeholder">搜索</label>
+                    <input id="s_input_1" class="nui_ipt_input" type="text">
+                </div>
+            </div>
+        </li>
+    </script>
+    <script id="sideMenuTemplate" type="text/html">
+        {{#menu}}
+        <li><a id="{{ID}}" onclick=openMenu("{{ID}}","{{name}}","{{URL}}")>{{name}}</a></li>
+          {{/menu}}
+    </script>
+  
+</body>
+</html>

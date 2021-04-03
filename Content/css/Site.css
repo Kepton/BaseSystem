@@ -1,0 +1,40 @@
+﻿html,body {
+	overflow-y: hidden;
+}
+.layout-split-west .panel-title{background:#ced0d3;}
+.panel-tool{top:0;margin:0; right:0;height:29px; }
+.layout-split-west .panel-tool a{ display:block; width:200px; height:29px; margin:0;}
+a.layout-button-left{ background:url(blue/images/icon_menu.png) center no-repeat}
+a.layout-button-right{ background:url(blue/images/icon_menu2.png) center no-repeat; margin:5px 5px 0 0}
+.layout-panel-center .panel-tool a{ display:block; width:24px; height:24px; margin:0;}
+.icon-menu{background:none}
+.language {
+            float: right;
+        height: 35px;
+        line-height: 35px;
+        }
+
+        .select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: 1px solid #fff;
+            padding: 3px;
+            padding-right: 18px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #FFF;
+            background: url(/Content/images/combo_arrow_w.png) no-repeat scroll right center transparent;
+        }
+
+    select::-ms-expand {
+            display: none;
+        }
+
+        option {
+            color: #333;
+        }
+/*div.side_menu ul li {
+    background:#e8e9ec;
+}*/

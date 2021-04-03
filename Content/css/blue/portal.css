@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+
+/*首页多窗口样式*/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#left {
+	width: 70%;
+	float: left;
+	display: inline;
+	margin: 5px;
+	padding: 5px;
+	overflow: hidden;
+}
+
+#center {
+	width: 26%;
+	float: left;
+	display: inline;
+	margin: 5px;
+	padding: 5px;
+	overflow: hidden;
+}
+
+#right {
+	width: 25%;
+	float: left;
+	display: inline;
+	margin: 5px;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.base_portal {
+	margin-bottom: 10px;
+}
+.base_portal span {
+	margin:5px 5px 0 0;
+	float:right;
+}
+.base_portal dt {
+	padding:0 10px;height:30px;line-height:30px;
+	background: #a4d2fe;
+	cursor: move;
+	color:#000;
+}
+
+.base_portal dd {
+	padding:0 5px 1px 5px;background: #fafafa;
+}
+.portal_add_btn a{ display:inline-block; height:28px; line-height:28px; padding:0 10px;  margin:0px}
+

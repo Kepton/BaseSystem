@@ -1,0 +1,49 @@
+.header{overflow:hidden; width:100%;min-width:940px; background:#5b67c6 url(images/header_bg.png);}
+.header_top{ width:100%; height:59px; overflow:hidden;}
+.header_userinfo{ width:500px; float:right; height:65px; background:url(images/header_right.jpg) no-repeat right;}
+.logo{ float:left; margin:0 0 0 0; display:inline-block; background:url(images/crew_logo.png) no-repeat; width:455px; height:69px;}
+.login_info{ float:right;color:#c1c6e9;margin-right:10px; _display:inline; margin-top:20px;}
+.header_date{ float:right; color:#bde9ff; line-height:33px;}
+.user_info{ float:right; margin-top:15px;}
+.user_info a{ float:left;margin-right:15px;display:block;width:28px; height:28px; text-align:center; background:url(images/user_ico_bg.png) no-repeat;}
+.user_info a:hover{ background:url(images/user_ico_bg2.png) no-repeat;}
+.user_info a span{display:block;width:28px; height:26px; background-position:center center;}
+.language_cn{ background:url(images/chinese.png) no-repeat}
+.language_en{ background:url(images/english.png) no-repeat}
+.language_tw{ background:url(images/chinese.png) no-repeat}
+.i_lock{ background:url(images/lock.png) no-repeat}
+.i_quit{ background:url(images/quit.png) no-repeat}
+.i_email{ background:url(images/email.png) no-repeat}
+.i_off{ background:url(images/header_off.png) no-repeat}
+.i_user_switch{ background:url(images/user_switch.png) no-repeat}
+
+.nav{ height:35px;padding:0 15px;background-color:rgba(0,0,0,0.1); filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#19000000', EndColorStr='#19000000');width: auto; }
+ul.nav_menu{float:left; font-family:"微软雅黑"}
+ul.nav_menu li{
+	display: block; 
+	float: left;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	z-index: 9999;
+	}
+ul.nav_menu li a{ 
+	display: block;
+	padding:0 20px;
+	height: 35px;
+	text-decoration: none;
+	font-size: 14px;
+	text-align: center;
+	color: #FFF; border-right:1px solid #646dba;
+	cursor:pointer;
+}
+ul.nav_menu li a:hover{display: block;background:#495191; color:#FFF;}
+ul.nav_menu li a.current,ul.nav_menu li a.current:hover,ul.nav_menu li a:active{display: block;background-color:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#4C000000', EndColorStr='#4C000000');  color:#FFF; font-weight:bold;}
+
+.nav_search{ position:relative; margin:4px 0 0 15px; width:160px;}
+.sJ0{background-color:#fff;opacity:.3;filter:alpha(opacity=30);border-radius:28px;position:absolute;width:100%;height:28px;left:0;top:0}
+.nui_ico{ display:inline-block; width:14px; height:14px; background:url(images/icon_nav_s.png) no-repeat; position:absolute; top:7px; left:8px;}
+
+.nui_ipt{ text-align:left; margin-left:30px;}
+.nui_ipt_placeholder{ position:absolute;top:-3px; left:30px; cursor:text; color:#525994;}
+.nui_ipt_input{ position:absolute;top:0px; left:30px;height:28px; line-height:28px; background:none; border:none; width:130px}

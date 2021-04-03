@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+.side_menu{ width:100%;}
+/*一级菜单*/
+.side_menu ul li {
+	display:block;
+	list-style:none;
+	overflow:visible;white-space:nowrap; 
+}
+.side_menu ul li a {
+	display:block;
+	height:40px; 
+	line-height:40px;
+	padding-left:10px;
+	border-bottom:1px solid #d5d5d5; 
+	font-size:12px;
+	color:#5b64a7;
+	outline:none;
+	white-space:nowrap; 
+	text-decoration:none;
+}
+.side_menu ul li a:link,.side_menu ul li a:visited{}
+.side_menu ul li a:hover,.side_menu ul li a:active{ background-color:#e1e2e6;}
+.side_menu ul li a.active111{background-color:#fff;}
+.side_menu ul li .active:link,.side_menu ul li .active:visited,.side_menu ul li .active:active {
+	background:#fff}
+.side_menu ul li .inactive {
+	background:#fff}
+
+.side_menu ul li a span.icon{ display:block; padding-left:15px;}
+.side_menu ul li a span.zj{background:url(images/pot_s.png) center left no-repeat}

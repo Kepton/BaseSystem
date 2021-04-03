@@ -1,0 +1,58 @@
+body {
+	min-width: 960px;
+}
+
+h1,h2,div p {
+	margin: 0;
+	padding: 10px;
+}
+
+#wrapper {
+	width: 80%;
+	margin: 0 auto;
+	background: #fbfbfb;
+}
+#header {
+	width: 100%;
+	background: #fbfbfb;
+	height: 90px;
+}
+#content {
+	background: #ffffff;
+	height: 520px;
+}
+
+
+#right {
+	float: right;
+}
+
+#footer {
+	clear: both;
+	height: 30px;
+}
+
+/* Clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-table;
+}
+/* Hides from IE-mac /*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+/* End hide from IE-mac */
+*+html .clearfix {
+	min-height: 1%;
+} /* IE7 */
